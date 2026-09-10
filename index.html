@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ignite Pickleball – Los Barriles Bootcamp 2026</title>
+<style>
+  :root {
+    --ocean: #0077b6;
+    --ocean-dark: #023e8a;
+    --sunset: #ff7b00;
+    --sunset-light: #ffb703;
+    --sand: #fefae0;
+    --white: #ffffff;
+    --text: #1a1a1a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f0f7fa;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--ocean-dark), var(--ocean));
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.9rem;
+    margin-bottom: 6px;
+  }
+
+  header p {
+    opacity: 0.9;
+    font-size: 1.05rem;
+  }
+
+  nav {
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav button {
+    background: #e8f4f8;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ocean-dark);
+    transition: all 0.2s;
+  }
+
+  nav button:hover,
+  nav button.active {
+    background: var(--ocean);
+    color: white;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 18px 60px;
+  }
+
+  .tab-content {
+    display: none;
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  h2 {
+    color: var(--ocean-dark);
+    margin-bottom: 18px;
+    font-size: 1.7rem;
+    border-bottom: 3px solid var(--sunset);
+    padding-bottom: 8px;
+    display: inline-block;
+  }
+
+  h3 {
+    color: var(--ocean);
+    margin: 25px 0 10px;
+  }
+
+  .photo-placeholder {
+    background: #e0f0f7;
+    border: 2px dashed var(--ocean);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    margin: 15px 0;
+    color: var(--ocean-dark);
+    font-weight: 500;
+  }
+
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin: 20px 0;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #fff8f0, #fff0e0);
+    border-left: 5px solid var(--sunset);
+    padding: 16px 20px;
+    border-radius: 0 10px 10px 0;
+    margin: 18px 0;
+  }
+
+  ul { padding-left: 22px; margin: 10px 0; }
+  li { margin-bottom: 6px; }
+
+  .guest-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .guest-list span {
+    background: #e8f4f8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 25px;
+    color: #666;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ignite Pickleball</h1>
+  <p>Los Barriles Bootcamp • October 25–31, 2026</p>
+  <p style="margin-top:6px; font-size:0.95rem;">Casa Afortunada • Baja California Sur, Mexico</p>
+</header>
+
+<nav>
+  <button class="tablink active" onclick="openTab(event, 'home')">Home</button>
+  <button class="tablink" onclick="openTab(event, 'logistics')">Logistics</button>
+  <button class="tablink" onclick="openTab(event, 'itinerary')">Daily Itinerary</button>
+  <button class="tablink" onclick="openTab(event, 'bootcamp')">Bootcamp</button>
+  <button class="tablink" onclick="openTab(event, 'accommodations')">Accommodations</button>
+  <button class="tablink" onclick="openTab(event, 'food')">Food & Events</button>
+  <button class="tablink" onclick="openTab(event, 'explore')">Explore</button>
+  <button class="tablink" onclick="openTab(event, 'guests')">Guests</button>
+</nav>
+
+<div class="container">
+
+  <!-- HOME -->
+  <div id="home" class="tab-content active">
+    <h2>Welcome</h2>
+    <p>Welcome to an unforgettable week of pickleball, Baja sunshine, chef-prepared meals, RZR adventures, and great company!</p>
+    
+    <div class="photo-placeholder">
+      Photo 8 – Casa Afortunada from the Beach (Hero Image)
+    </div>
+
+    <div class="highlight-box">
+      <strong>Hosts:</strong> Nicolas & Jenny Radisay – Ignite Pickleball
+    </div>
+
+    <h3>Guests</h3>
+    <div class="guest-list">
+      <span>Jolie Eisner</span>
+      <span>Stephany Panlilio</span>
+      <span>Shane & Shana Sullivan</span>
+      <span>Mark & Darla Pagano</span>
+      <span>Ryan & Christy Miller</span>
+      <span>Brian & Shelly Short</span>
+    </div>
+  </div>
+
+  <!-- LOGISTICS -->
+  <div id="logistics" class="tab-content">
+    <h2>Logistics</h2>
+
+    <h3>Arrival – Sunday, October 25</h3>
+    <ul>
+      <li>Most guests: Southwest WN630 (SNA → SJD)</li>
+      <li>Ryan, Nicolas & Jenny: Flight details pending</li>
+      <li>Transfer: RC Five Star Sedans & Limos – Sprinter Van</li>
+      <li>WhatsApp: +52 624 205 4240</li>
+      <li>Route: SJD → Casa Afortunada</li>
+    </ul>
+
+    <h3>Local Transportation – RZRs</h3>
+    <p>3 Four-Passenger RZR 1000s provided by Sergio’s ATV</p>
+    <div class="photo-grid">
+      <div class="photo-placeholder">Photo 12 – Happy Riders</div>
+      <div class="photo-placeholder">Photo 13 – Beach Highway</div>
+      <div class="photo-placeholder">Photo 14 – Beach Club Baja Style</div>
+    </div>
+
+    <h3>Departure – Saturday, October 31</h3>
+    <ul>
+      <li>Transfer: Same RC Five Star Sprinter Van</li>
+      <li>Casa Afortunada → SJD (Brian & Shelly continue to Cabo San Lucas)</li>
+      <li>Main group return flight: Southwest WN631 (SJD → SNA)</li>
+    </ul>
+  </div>
+
+  <!-- DAILY ITINERARY -->
+  <div id="itinerary" class="tab-content">
+    <h2>Daily Itinerary</h2>
+
+    <h3>Sunday, Oct 25 – Arrival</h3>
+    <p>Arrive SJD → Transfer to Casa Afortunada<br>6:00 PM – Welcome Dinner by Chef Lupi (Baja Casual)</p>
+
+    <h3>Monday, Oct 26 – Bootcamp Day 1</h3>
+    <p>8:00–11:00 AM Bootcamp @ Tres Palapas<br>11:00 AM Brunch<br>Afternoon Leisure / RZR time<br>5:00–7:00 PM Social Pickleball<br>Dinner on your own</p>
+
+    <h3>Tuesday, Oct 27 – Bootcamp Day 2</h3>
+    <p>Same schedule as Monday</p>
+
+    <h3>Wednesday, Oct 28 – Free / Excursion Day</h3>
+    <p>Optional activities, extra pickleball, beach time, or RZR exploring. No meals included.</p>
+
+    <h3>Thursday, Oct 29 – Bootcamp Day 3</h3>
+    <p>Same schedule as Monday</p>
+
+    <h3>Friday, Oct 30 – Bootcamp Day 4 + Special Evening</h3>
+    <p>Regular bootcamp schedule<br>6:00 PM – Día de los Muertos Dinner by Chef Rogelio Granado + Live Music by Pepon Music</p>
+
+    <h3>Saturday, Oct 31 – Departure</h3>
+    <p>Morning leisure → Transfer to SJD</p>
+  </div>
+
+  <!-- BOOTCAMP -->
+  <div id="bootcamp" class="tab-content">
+    <h2>Ignite Pickleball Bootcamp</h2>
+    <div class="photo-placeholder">Photo 6 – Tres Palapas Aerial View</div>
+    <p><strong>Location:</strong> Tres Palapas Baja Pickleball Resort</p>
+    <p><strong>Coaches:</strong> Nicolas Radisay & “Baja” Joe</p>
+    <p><strong>Daily Structure (Mon, Tue, Thu, Fri):</strong></p>
+    <ul>
+      <li>8:00–11:00 AM Intensive Bootcamp</li>
+      <li>5:00–7:00 PM Social Play</li>
+    </ul>
+  </div>
+
+  <!-- ACCOMMODATIONS -->
+  <div id="accommodations" class="tab-content">
+    <h2>Casa Afortunada</h2>
+    <p>Private beachside residence in Los Barriles with ocean views, pool, hot tub, and easy beach access.</p>
+    <div class="photo-grid">
+      <div class="photo-placeholder">Photo 8 – From the Beach</div>
+      <div class="photo-placeholder">Photo 9 – Pool</div>
+      <div class="photo-placeholder">Photo 10 – Hot Tub Area</div>
+      <div class="photo-placeholder">Photo 11 – Patio with Ocean View</div>
+    </div>
+  </div>
+
+  <!-- FOOD & EVENTS -->
+  <div id="food" class="tab-content">
+    <h2>Food & Special Events</h2>
+
+    <h3>Sunday, Oct 25 – 6:00 PM | Welcome Dinner</h3>
+    <p><strong>Chef Lupi</strong> • Baja Casual attire</p>
+    <p>Green Chicken Enchiladas, Chiles Rellenos, Chicken Tacos, Rice, Beans, Guacamole, Pico de Gallo & Tortilla Chips</p>
+    <div class="photo-grid">
+      <div class="photo-placeholder">Photo 1 – Chef Lupi & Crew</div>
+      <div class="photo-placeholder">Photo 2 – Food Spread</div>
+    </div>
+
+    <h3>Daily Brunch (Bootcamp Days)</h3>
+    <p>Provided by Tres Palapas – Mexican style</p>
+    <div class="photo-placeholder">Photo 7 – Tres Tacos</div>
+
+    <h3>Friday, Oct 30 – 6:00 PM | Día de los Muertos Dinner</h3>
+    <p><strong>Chef Rogelio Granado</strong> • Día de los Muertos theme attire</p>
+    <p>Five-course meal: Appetizers, Salad, Sonoran Style Beef or Catch of the Day, Sides & Dessert</p>
+    <p><strong>Live Music:</strong> Pepon Music (Classic Rock, Reggae, Blues, 80s–Present)</p>
+    <div class="photo-grid">
+      <div class="photo-placeholder">Photo 3 – Chef Rogelio & Crew</div>
+      <div class="photo-placeholder">Photo 4 – Plated Creation</div>
+      <div class="photo-placeholder">Photo 5 – Live Music / Pepon</div>
+    </div>
+  </div>
+
+  <!-- EXPLORE -->
+  <div id="explore" class="tab-content">
+    <h2>Explore Los Barriles</h2>
+    <p>RZR beach & arroyo rides • Optional Wednesday activities • Extra pickleball • Beach time • Local restaurants</p>
+    <div class="photo-grid">
+      <div class="photo-placeholder">Photo 13 – RZR on the Beach</div>
+      <div class="photo-placeholder">Photo 14 – Beach Club Scene</div>
+    </div>
+  </div>
+
+  <!-- GUESTS -->
+  <div id="guests" class="tab-content">
+    <h2>Guests & Contacts</h2>
+    <h3>Hosts</h3>
+    <p>Nicolas & Jenny Radisay – Ignite Pickleball</p>
+    <h3>Guests</h3>
+    <div class="guest-list">
+      <span>Jolie Eisner</span>
+      <span>Stephany Panlilio</span>
+      <span>Shane & Shana Sullivan</span>
+      <span>Mark & Darla Pagano</span>
+      <span>Ryan & Christy Miller</span>
+      <span>Brian & Shelly Short</span>
+    </div>
+    <h3>Important Contact</h3>
+    <p>RC Five Star Sedans & Limos<br>WhatsApp: +52 624 205 4240</p>
+  </div>
+
+</div>
+
+<footer>
+  Ignite Pickleball World Excursions • Los Barriles 2026
+</footer>
+
+<script>
+  function openTab(evt, tabName) {
+    const contents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < contents.length; i++) {
+      contents[i].classList.remove("active");
+    }
+    const links = document.getElementsByClassName("tablink");
+    for (let i = 0; i < links.length; i++) {
+      links[i].classList.remove("active");
+    }
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+  }
+</script>
+
+</body>
+</html>
